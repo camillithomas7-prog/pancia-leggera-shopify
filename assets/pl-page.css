@@ -511,4 +511,92 @@
   .pl .fq button{font-size:18px}
   .pl .cta-row .btn{width:100%}
 }
+
+
+@media(max-width:900px){
+  html{overflow-x:hidden}
+  .pl .tour-ph:before{inset:30px 0}
+  .pl section{padding:58px 0}
+  .pl h2{font-size:31px;line-height:1.1}
+  .pl .lead{font-size:15.5px}
+  .pl .eyebrow{font-size:11.5px}
+  .pl .btn{padding:17px 26px;font-size:16px}
+  
+  .pl .topbar{font-size:12px;padding:8px 10px}
+  .pl .hero{padding:22px 0 40px}
+  .pl .rating{font-size:12.5px;padding:6px 14px 6px 8px}
+  .pl .hero h1{font-size:40px;margin:16px 0 14px}
+  .pl .hero .lead{margin-bottom:20px}
+  .pl .ticks{gap:9px;margin-bottom:24px}.pl .ticks li{font-size:15px}
+  .pl .cta-row{flex-direction:column;align-items:stretch;gap:12px}
+  .pl .cta-row .btn{width:100%}
+  .pl .price-mini{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap}
+  .pl .price-mini b{font-size:24px}.pl .price-mini small{width:100%;text-align:center}
+  .pl .trust{justify-content:center;gap:8px 14px;margin-top:18px;font-size:12.5px}
+  .pl .hero-photo{display:none}
+  .pl .hero-v{height:540px;margin-top:20px}
+  .pl .hero-v .phone{width:262px}
+  .pl .n1{left:-6px;bottom:30px;width:255px;font-size:12px}
+  .pl .c1{right:-4px;bottom:200px;padding:10px 13px}.pl .c1 b{font-size:22px}
+  .pl .marq{padding:14px 0}.pl .marq span{font-size:18px;gap:30px}.pl .marq div{gap:30px;padding-right:30px}
+  
+  .pl .prob-g{gap:30px}
+  .pl .dayline{margin-top:24px;gap:10px}
+  .pl .dl{padding:11px 14px;grid-template-columns:62px 1fr;gap:12px}.pl .dl b{font-size:17px}.pl .dl small{font-size:12.5px}
+  .pl .prob-ph{margin-bottom:70px}
+  .pl .prob-ph .q{font-size:16px;padding:16px 18px;bottom:-62px}
+  
+  .pl .stats, .pl .prof-g, .pl .phases, .pl .revs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin-left:-20px;margin-right:-20px;padding:6px 20px 18px;scrollbar-width:none;columns:auto}
+  .pl .stats::-webkit-scrollbar, .pl .prof-g::-webkit-scrollbar, .pl .phases::-webkit-scrollbar, .pl .revs::-webkit-scrollbar{display:none}
+  .pl .stats>*, .pl .prof-g>*, .pl .phases>.ph, .pl .revs>*{flex:0 0 calc(100vw - 64px);max-width:340px;scroll-snap-align:start;margin:0}
+  .pl .stats, .pl .prof-g, .pl .phases, .pl .revs{scroll-padding-left:20px}
+  .pl .prof-g.wrap, .pl .revs.wrap{width:auto;margin-left:0;margin-right:0}
+  .pl .rev.ph img{display:none}.pl .rev.ph .in2{padding:22px}.pl .revs{align-items:stretch}
+  .pl .stats .rv, .pl .prof-g .rv, .pl .phases .rv, .pl .revs .rv{opacity:1;transform:none}
+  .pl .stats{margin-top:40px}.pl .stat{padding:22px}.pl .stat b{font-size:42px}.pl .stat p{font-size:14.5px}
+  .pl .prof-g{margin-top:30px}
+  .pl .prof{display:block;padding:22px}.pl .prof img{width:76px;height:76px;margin-bottom:12px}
+  .pl .prof:before{width:130px;height:130px;top:-55px;right:-55px}
+  .pl .ph{flex-basis:calc(100vw - 64px)!important}.pl .ph-c{padding:24px 22px}.pl .ph-c h3{font-size:26px}
+  .pl .phases{margin-top:34px}
+  .pl .revs{margin-top:30px;align-items:flex-start}.pl .rev{padding:22px}.pl .rev.ph .in2{padding:18px 22px 22px}
+  .pl .swipe{display:flex!important}
+  
+  .pl .quiz{margin-top:28px;min-height:0;padding:24px 18px}
+  .pl .qstep h3{font-size:24px;margin-bottom:18px}
+  .pl .opts button{padding:15px 16px;font-size:15px}
+  .pl .res-top h3{font-size:28px}
+  
+  .pl .path{margin:0 8px}
+  .pl .graph{margin-top:20px;padding:22px 18px 16px;border-radius:22px}.pl .graph-h h3{font-size:22px}.pl .graph-h .big{font-size:36px}
+  
+  .pl .tour-g{margin-top:28px;gap:16px}
+  .pl .tl{order:-2;padding-bottom:6px}
+  .pl .tour-ph .phone{width:280px}
+  
+  .pl .day-ph .wrapimg{aspect-ratio:16/9.5}
+  .pl .hr h4{font-size:21px}.pl .hr p{font-size:14.5px}.pl .hr{padding:16px 0}.pl .hr:before{top:24px}
+  .pl .rule{font-size:14px;padding:18px}
+  
+  .pl .tbl{margin-top:30px;border-radius:22px}
+  
+  .pl .off-g{gap:34px}
+  .pl .incl{margin-top:20px;gap:10px}.pl .incl li{padding:12px 14px;gap:12px}.pl .incl img{width:40px;height:40px}.pl .incl b{font-size:14.5px}.pl .incl span{font-size:13px}
+  .pl .pcard .mock{width:140px}
+  .pl .pcard .pp b{font-size:54px}
+  .pl .gar{padding:14px}.pl .gar img{width:46px}
+  
+  .pl .faq{margin-top:24px}.pl .fq button{padding:18px 0;font-size:17.5px}.pl .fq .a p{padding-right:10px;font-size:15px}
+  .pl .final{padding:20px 0 150px}
+  .pl .fin{padding:44px 22px 0}
+  .pl .fin p{font-size:16px;margin:14px auto 22px}
+  .pl .fin .phone{width:210px;margin:24px auto -110px}
+  .pl .med{padding:18px;font-size:12.5px;gap:12px;margin-top:24px}
+  .pl .stk{left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));padding:9px 9px 9px 18px;border-radius:20px}
+  .pl .stk b{font-size:20px}.pl .stk small{font-size:11px}.pl .stk .btn{padding:13px 20px;font-size:14.5px}
+}
+.pl .swipe{display:none;justify-content:center;align-items:center;gap:8px;font-size:12.5px;font-weight:700;color:var(--mute);margin-top:-4px}
+.pl .swipe svg{width:16px;height:16px;animation:nudge 1.6s ease-in-out infinite}
+.pl .path .swipe{color:#8FA197}
+@keyframes nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pl .rv{opacity:1;transform:none}}

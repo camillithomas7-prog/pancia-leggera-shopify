@@ -544,8 +544,12 @@
   .pl .hero-v{height:540px;margin-top:20px}
   .pl .hero-v .phone{width:262px}
   .pl .hero-v .idx{gap:10px;padding:10px}.pl .hero-v .ring{width:54px;height:54px}.pl .hero-v .ring b{font-size:18px}.pl .hero-v .idx p b{font-size:11.5px}
-  .pl .n1{left:-6px;bottom:30px;width:255px;font-size:12px}
-  .pl .c1{right:-4px;bottom:200px;padding:10px 13px}.pl .c1 b{font-size:22px}
+  .pl .n1{left:50%;right:auto;bottom:auto;top:30px;width:248px;font-size:11.5px;padding:10px 12px 10px 10px;gap:9px;border-radius:18px;transform:translate(-50%,-22px) scale(.94);box-shadow:0 18px 40px -16px rgba(30,50,40,.45)}
+  .pl .n1.in{transform:translate(-50%,0)}
+  .pl .n1 .lg{width:32px;height:32px;border-radius:9px}.pl .n1 .lg svg{width:18px;height:18px}
+  .pl .n1 small{font-size:10px}
+  .pl .c1{display:none}
+  .pl .hero-v .p1{margin-right:0}
   .pl .marq{padding:14px 0}.pl .marq span{font-size:18px;gap:30px}.pl .marq div{gap:30px;padding-right:30px}
   
   .pl .prob-g{gap:30px}

@@ -16,6 +16,7 @@ $$('.rv,.stat b,.stat span[data-count]').forEach(function(el){io.observe(el)});
 /* hero */
 setTimeout(function(){ring($('.hero'))},500);
 $$('.hero [data-delay]').forEach(function(el){setTimeout(function(){el.classList.add('in')},+el.dataset.delay)});
+var n1=$('.n1');setTimeout(function(){setInterval(function(){n1.classList.toggle('in')},n1.classList.contains('in')?4200:4200)},5600);
 /* track percorso */
 var tr=$('.track i');if(tr)new IntersectionObserver(function(es,o){if(es[0].isIntersecting){tr.style.width='100%';o.disconnect()}},{threshold:.3}).observe($('.phases'));
 var gr=$('#graph');new IntersectionObserver(function(es,o){if(es[0].isIntersecting){gr.classList.add('in');o.disconnect()}},{threshold:.35}).observe(gr);

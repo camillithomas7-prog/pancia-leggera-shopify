@@ -49,20 +49,27 @@ function result(){
 }
 $('#qredo').addEventListener('click',reset);reset();
 
-/* ---------- APP TOUR ---------- */
-if(matchMedia('(max-width:900px)').matches){var tl=$('.tl');$$('.tr .tb').forEach(function(b){tl.appendChild(b)});$('.tr').style.display='none'}
-var tbs=$$('.tb'),svs=$$('.sv'),ti=0,timer,visible=false;
-function go(i,user){ti=i;var s=tbs[i].dataset.s;tbs.forEach(function(t,k){t.classList.toggle('on',k===i);var p=$('.pr i',t);p.style.animation='none';p.offsetWidth;p.style.animation=''});
-  svs.forEach(function(v){v.classList.toggle('on',v.dataset.v===s)});
-  var tm={oggi:0,resp:0,menu:1,spesa:1,sos:2,diario:3,prog:3,sema:4};$$('.tour-ph .tabbar>span').forEach(function(x,k){x.classList.toggle('on',k===tm[s])});
-  var on=$('.sv.on');if(s==='oggi')ring(on);if(s==='diario')$$('#week i').forEach(function(w,k){w.style.height='0';setTimeout(function(){w.style.height=w.dataset.h+'%'},80+k*90)});
-  if(s==='resp')breathe();
-  clearTimeout(timer);if(!user||true)timer=setTimeout(function(){if(visible&&!pausedT)go((ti+1)%tbs.length)},user?12000:6000);
-  if(user&&window.innerWidth<900)tbs[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});}
-var pausedT=false;
-tbs.forEach(function(t,k){t.addEventListener('click',function(){go(k,true)})});
-$('.tour-ph').addEventListener('pointerdown',function(){pausedT=true;clearTimeout(timer)});
-new IntersectionObserver(function(es){visible=es[0].isIntersecting;if(visible&&!pausedT){clearTimeout(timer);go(ti)}},{threshold:.4}).observe($('.tour-ph'));
+/* ---------- APP TOUR: l'app si usa da sola ---------- */
+var svs=$$('.sv'),tph=$('.tour-ph');
+var CAP={oggi:["Oggi","Le attività del giorno in ordine di orario, con le notifiche sui tuoi orari. Tocca un'attività per spuntarla."],
+ menu:["Menu del giorno","Ricette da 15 minuti con la versione da portare in ufficio. Premi «Sostituisci piatto» se non ti va."],
+ diario:["Diario del gonfiore","Un voto da 1 a 10 con un solo tocco dopo i pasti: è da qui che l'app capisce cosa ti gonfia."],
+ prog:["Progressi e trigger","Il grafico del gonfiore che scende e, al giorno 21, la lista dei cibi che gonfiano proprio te."],
+ sema:["Semaforo alimenti","Scrivi un cibo e scopri se è verde, giallo o rosso per il tuo profilo. Prova con «pizza» o «ceci»."],
+ resp:["Respirazione guidata","3 minuti di respiro diaframmatico: segui il cerchio che si gonfia e si sgonfia."],
+ sos:["SOS gonfiore","Sei gonfia adesso? Cinque passi per i prossimi 30 minuti, e cosa mangiare al pasto dopo."],
+ spesa:["Lista della spesa","Generata in automatico dal tuo menu, divisa per reparto. Spunta mentre fai la spesa."]};
+var TABK={oggi:'oggi',resp:'oggi',diario:'prog',menu:'menu',spesa:'menu',sos:'sos',prog:'prog',sema:'sema'};
+function go(s){svs.forEach(function(v){v.classList.toggle('on',v.dataset.v===s)});
+  $$('.tour-ph .tabbar>span').forEach(function(x){x.classList.toggle('on',x.dataset.go===TABK[s])});
+  $('#capT').textContent=CAP[s][0];$('#capP').textContent=CAP[s][1];
+  var cap=$('.tour-cap');cap.classList.remove('flip');void cap.offsetWidth;cap.classList.add('flip');
+  if(s==='oggi')ring($('.sv.on'));
+  if(s==='diario')$$('#week i').forEach(function(w,k){if(w.classList.contains('t')&&w.dataset.set)return;w.style.height='0';setTimeout(function(){w.style.height=w.dataset.h+'%'},80+k*90)});
+  if(s==='resp')breathe()}
+window.plGo=go;
+tph.addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(b){e.preventDefault();go(b.dataset.go)}tph.classList.add('used')});
+new IntersectionObserver(function(es,o){if(es[0].isIntersecting){ring($('.sv.on'));o.disconnect()}},{threshold:.4}).observe(tph);
 /* menu swap */
 var dishes=[["Riso basmati con pollo, zucchine e limone","15 min",A+"ph-piatto.jpg"],["Insalata tiepida di quinoa, spinaci e salmone","12 min",A+"ph-spesa.jpg"],["Pasta senza glutine con zucchine e menta","15 min",A+"ph-piatto.jpg"],["Piadina con tacchino, rucola e carote","8 min",A+"ph-spesa.jpg"]],di=0;
 $('#swap').addEventListener('click',function(){di=(di+1)%dishes.length;var im=$('#dImg');im.style.opacity=.2;setTimeout(function(){$('#dName').textContent=dishes[di][0];$('#dT').textContent=dishes[di][1];im.style.backgroundImage='url('+dishes[di][2]+')';im.style.opacity=1},250)});

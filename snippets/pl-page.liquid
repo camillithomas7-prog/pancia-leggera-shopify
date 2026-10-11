@@ -19,7 +19,7 @@
       </ul>
       <div class="cta-row rv d4">
         <a href="#quiz" class="btn">Scopri il tuo profilo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <div class="price-mini"><b>{{ product.price | money }}</b><s>49 €</s><small>pagamento unico · accesso a vita</small></div>
+        <div class="price-mini"><b>{{ product.price | money }}</b><s>49 €</s><span class="once"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Paghi una volta sola · <u>nessun abbonamento</u></span></div>
       </div>
       <div class="trust rv d4">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Garanzia 30 giorni</span>
@@ -369,7 +369,7 @@
       <img class="mock" src="{{ 'mock-app.png' | asset_url }}" alt="App Pancia Leggera">
       <h3>Pancia Leggera</h3>
       <div class="pp"><b>{{ product.price | money }}</b><s>49 €</s></div>
-      <p class="sub">Pagamento unico · nessun abbonamento · accesso a vita</p>
+      <div class="once big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Paghi una volta sola, è tua per sempre</div><p class="sub">Nessun abbonamento, nessun rinnovo automatico, nessun costo nascosto.</p>
       <button type="button" class="btn buy">Voglio la mia pancia leggera <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       <div class="pay"><span>VISA</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>Google Pay</span></div>
       <div class="gar"><img loading="lazy" src="{{ 'ic-scudo.png' | asset_url }}" alt=""><div><b>Garanzia soddisfatta o rimborsata 30 giorni</b><span>Se non ti trovi bene, ci scrivi e ti rimborsiamo. Senza domande.</span></div></div>
@@ -382,7 +382,7 @@
   <div class="wrap center"><span class="eyebrow rv">Domande frequenti</span><h2 class="rv d1">Hai qualche dubbio?</h2></div>
   <div class="wrap faq">
     <div class="fq on"><button>Come ricevo l'app dopo l'acquisto?<i></i></button><div class="a"><div><p>Subito dopo il pagamento ricevi un'email con il tuo link di accesso personale e le istruzioni, con immagini passo passo, per aggiungerla alla schermata Home del telefono. Non serve scaricare nulla dagli store e non serve una password.</p></div></div></div>
-    <div class="fq"><button>È un abbonamento?<i></i></button><div class="a"><div><p>No. Paghi {{ product.price | money }} una sola volta e l'app resta tua per sempre, compresa la fase di mantenimento illimitata e gli aggiornamenti futuri.</p></div></div></div>
+    <div class="fq"><button>Devo pagare ogni mese?<i></i></button><div class="a"><div><p>No, non è un abbonamento. Paghi {{ product.price | money }} una sola volta, nessun rinnovo automatico, e l'app resta tua per sempre, compresa la fase di mantenimento illimitata e gli aggiornamenti futuri.</p></div></div></div>
     <div class="fq"><button>Devo contare le calorie o pesare il cibo?<i></i></button><div class="a"><div><p>No. Non è una dieta da fame: non si contano calorie e non si pesa nulla. Lavori su cosa mangi e quando lo mangi, in base al tuo profilo.</p></div></div></div>
     <div class="fq"><button>Non ho tempo per cucinare. Funziona lo stesso?<i></i></button><div class="a"><div><p>Sì. Le ricette si preparano in 5-15 minuti, ogni pasto ha l'alternativa "al bar" o la versione da portare in ufficio, e la lista della spesa si genera da sola.</p></div></div></div>
     <div class="fq"><button>Seguo un'alimentazione vegetariana, vegana o senza glutine.<i></i></button><div class="a"><div><p>Nel quiz indichi come mangi e cosa non ti piace: i menu si adattano a onnivora, vegetariana, vegana, senza lattosio e senza glutine. E se un piatto non ti va, il tasto "sostituisci" te ne propone un altro equivalente.</p></div></div></div>
@@ -416,7 +416,7 @@
   </div>
 </section>
 
-<div class="stk" id="stk"><div><b>{{ product.price | money }}</b><small>accesso a vita · garanzia 30 giorni</small></div><button type="button" class="btn buy">Inizia ora</button></div>
+<div class="stk" id="stk"><div><b>{{ product.price | money }}</b><small>una volta sola · nessun abbonamento</small></div><button type="button" class="btn buy">Inizia ora</button></div>
 
 
 </div>

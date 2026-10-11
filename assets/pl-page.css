@@ -55,6 +55,11 @@
 .pl .price-mini b{font-family:Fraunces,serif;font-size:30px;font-weight:600}
 .pl .price-mini s{color:var(--mute);margin-left:6px}
 .pl .price-mini small{display:block;color:var(--mute);font-size:13px;font-weight:500}
+.pl .once{display:flex;align-items:center;gap:7px;margin-top:6px;background:var(--mint);color:var(--sage-d);font-size:13.5px;font-weight:700;padding:7px 13px 7px 9px;border-radius:99px;width:max-content;max-width:100%}
+.pl .once svg{width:15px;height:15px;flex:none;background:var(--sage-d);color:#fff;border-radius:50%;padding:2.5px}
+.pl .once u{text-decoration:none;color:var(--ink)}
+.pl .once.big{margin:4px auto 8px;font-size:15px;padding:9px 16px 9px 11px}
+.pl .once.big svg{width:18px;height:18px}
 .pl .trust{display:flex;gap:22px;margin-top:28px;flex-wrap:wrap;font-size:13.5px;color:var(--ink2);font-weight:600}
 .pl .trust span{display:flex;align-items:center;gap:7px}
 .pl .trust svg{width:18px;height:18px;color:var(--sage)}
@@ -533,6 +538,7 @@
   .pl .cta-row .btn{width:100%}
   .pl .price-mini{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap}
   .pl .price-mini b{font-size:24px}.pl .price-mini small{width:100%;text-align:center}
+  .pl .price-mini .once{margin:2px auto 0;font-size:13px}
   .pl .trust{justify-content:center;gap:8px 14px;margin-top:18px;font-size:12.5px}
   .pl .hero-photo{display:none}
   .pl .hero-v{height:540px;margin-top:20px}
